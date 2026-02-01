@@ -21,27 +21,64 @@ import {useState } from "react";
 
 function Myfirst({nam,age=10,arr,ob}){
 
-  
-  let [count,setcount]=useState(0);
+  let [formData,setData] = useState({username:"umar",age:0,password:""});
 
-  function countupdater(){
-    setcount(count+1)
+  function changeData(event){
+  
+    // console.log(event.target.name)
+    // console.log(event.target.value)
+
+    setData({...formData,[event.target.name]:event.target.value})
+    
   }
 
-  const color=age>10?"red":"blue"
+  function submitform(event){
+    event.preventDefault();
+    event.target.username.value=""
+    event.target.age.value=0
+    event.target.password.value=""
+  }
+  
+  // let [count,setcount]=useState(0);
+
+  // function countupdater(){
+  //   setcount(count+1)
+  // }
+
+  // const color=age>10?"red":"blue"
 
     
   return(
     <>
 
-    <button onClick={countupdater}>cliick{count}</button>
+    <form action="" onSubmit={submitform}>
+      <label htmlFor="username">enter tour username</label>
+      <input type="text" name="username" id="username" placeholder="username" onChange={changeData}/>
+      <br />
+      <br />
+      <br />
+      <label htmlFor="age">enter tour age</label>
+      <input type="number" name="age" id="age" placeholder="age" onChange={changeData}/>
+      <br />
+      <br />
+      <br />
+      <label htmlFor="password">enter tour password</label>
+      <input type="text" name="password" id="password" placeholder="password" onChange={changeData}/>
+      <br />
+      <br />
+      <button>submit</button>
+    </form>
+
+
+
+    {/* <button onClick={countupdater}>cliick{count}</button>
     {/* <p style={{color:color}}>hello my first react app {nam} {age} </p>
      <ul>
         {arr.map((el, index) => (
           <li key={index}>{el}</li>
         ))}
       </ul>
-      <h1>{ob.name}</h1> */}
+      <h1>{ob.name}</h1> }*/}
     
     </>
   )
