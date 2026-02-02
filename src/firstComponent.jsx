@@ -31,7 +31,7 @@ function Myfirst({nam,age=10,arr,ob}){
 
   useEffect(()=>{
     console.log("use effec")
-  },[])
+  },[formData])
 
   function changeData(event){
   
