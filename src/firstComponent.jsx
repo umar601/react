@@ -17,11 +17,21 @@
 //props
 //states and hooks
 
-import {useState } from "react";
+//use effect is also very important in react and its used to show the thing first time on the screen during rerendering or even rendering and we can also use it for particular use state and and if we want for all we pass empty array
+
+//use effect first of all we import from react and then useeffect have two parameters one is the function and other is argument we to apply on the use effect and pass it on the array and if the array is empty it means is apply to all 
+
+//the practical example of the use effect is we want to show loading bar untill the data is fetched from the data base and it like for the asyncronus functions and apply on the things we want to show only one time on the start or particular state change time 
+
+import {useState,useEffect} from "react";
 
 function Myfirst({nam,age=10,arr,ob}){
 
-  let [formData,setData] = useState({username:"umar",age:0,password:""});
+  let [formData,setData] = useState({username:"umar",age:0,password:"mm"});
+
+  useEffect(()=>{
+    console.log("use effec")
+  },[])
 
   function changeData(event){
   
@@ -53,17 +63,17 @@ function Myfirst({nam,age=10,arr,ob}){
 
     <form action="" onSubmit={submitform}>
       <label htmlFor="username">enter tour username</label>
-      <input type="text" name="username" id="username" placeholder="username" onChange={changeData}/>
+      <input type="text" name="username" id="username" placeholder="username" value={formData.username} onChange={changeData}/>
       <br />
       <br />
       <br />
       <label htmlFor="age">enter tour age</label>
-      <input type="number" name="age" id="age" placeholder="age" onChange={changeData}/>
+      <input type="number" name="age" id="age" placeholder="age" value={formData.age} onChange={changeData}/>
       <br />
       <br />
       <br />
       <label htmlFor="password">enter tour password</label>
-      <input type="text" name="password" id="password" placeholder="password" onChange={changeData}/>
+      <input type="text" name="password" id="password" placeholder="password" value={formData.password} onChange={changeData}/>
       <br />
       <br />
       <button>submit</button>
