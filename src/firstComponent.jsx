@@ -23,6 +23,9 @@
 
 //the practical example of the use effect is we want to show loading bar untill the data is fetched from the data base and it like for the asyncronus functions and apply on the things we want to show only one time on the start or particular state change time 
 
+//we write file name as jsx because we wirte html inside javascipt and this covert into virtual dom using internal compliler called bebble whcih covert it into to virtual doma 
+
+//during rerendrring only that part of pages renrender chnage not the whole page 
 import {useState,useEffect} from "react";
 
 function Myfirst({nam,age=10,arr,ob}){
