@@ -1,5 +1,6 @@
 import Myfirst from "./firstComponent"
 import card from "./card"
+import Todo from "./todo"
 
 function App() {
  
@@ -7,8 +8,10 @@ function App() {
 
   return (
     <>
-    <card/>
-    <Myfirst nam="umar" arr={[1,2,3,4,5]} ob={{name:"umar"}}/>
+    <Todo/>
+
+    {/* <card/>
+    <Myfirst nam="umar" arr={[1,2,3,4,5]} ob={{name:"umar"}}/> */}
     </>
   )
 }
