@@ -93,6 +93,65 @@
 
 //make each compenent style page and add styling dont write in the same file of all component and its not good practice
 
+//props are the information pass to jsx tag or the component we can pass string integer arr and even the object 
+
+//props to make our component dynamic 
+
+{/* <Todo price={[1,3,4,]}></Todo> //passingarrya */}
+
+{/* <todo price={2000}></todo> //integer */}
+
+{/* <todo name="umar"></todo>  //string */}
+
+{/* <todo obj={{name:"umar",age:10}}></todo> //object */}
+
+//we can make array string object or arr nad then pass below this will also work fine
+
+//to get in the function we can use props or even we can use the same name we pass as props in the component and its good to use as name 
+
+// we we use this we can behave with these like normal function parameter like we can make default one mean if one arguemnet not come then its valus will be
+
+
+//to render arr it normal print in straight like string but when we show as indvidual we use arr.map
+
+//the array is printed normally without comma seprated because individual element is picked and then printed thats why not printed comma seprated 
+
+//we can use object directly while we can use object.key
+
+// the one solution is we send array of elelmet but its not good we use arr.map
+
+// let arr=[<li>umar</li>,<li>abbas</li>]
+
+//like this
+
+
+// arr.map((el,index)=>{
+//     return<li key={index}></li>
+// })
+
+//we can mostly conditions as 
+
+// let result = found?<p>found</p>:<p>not</p>
+
+//dynamic componenet styling and through whicj we can style dynanically
+
+// let color =found?"red":"green"
+
+// let style={color: age>15?"red":"green"}
+
+//both above are work
+
+// let color =found &&?"red"  this check first if its exist then its shows only
+
+// style={{color:color}}//for styling
+
+
+//the allstyling component must be camel case 
+
+//install react developer tool for complete hirearchy of the compoents used in the page 
+
+
+
 
 
 
