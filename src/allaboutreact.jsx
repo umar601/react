@@ -97,6 +97,8 @@
 
 //props to make our component dynamic 
 
+//props in react are immutable 
+
 {/* <Todo price={[1,3,4,]}></Todo> //passingarrya */}
 
 {/* <todo price={2000}></todo> //integer */}
@@ -149,6 +151,149 @@
 //the allstyling component must be camel case 
 
 //install react developer tool for complete hirearchy of the compoents used in the page 
+
+
+//handling clicke events or any events in forms 
+
+//the non click include hove oneneter onexit and other many or double click 
+
+// we do this using sates and hooks
+//make function for that
+
+// function doseomthi(event){  //teh event argument have the all the all attributes in the event happened in the forms
+
+//     console.log(event.target.name) // the filed in which we chnage 
+
+//     console.log(event.target.name) // the filed value  in which we chnage 
+
+//     event.preventDefualt()//the prevent the defualy behaviour of the form and its ususllay use in onSubmit 
+
+//     console.log("button clicked")
+// }
+
+
+
+// <form>
+
+//     <button onClick={doseomthi}></button>  // we have not to call the function here but only pass otherwise ist execute only one time when the page refresh and not work only every click 
+
+// </form>
+
+
+//react update the dom not the console 
+
+
+//states in react 
+
+//built in react object that contain data and information about the component 
+
+//the state change over time and when the state change the componenet re render
+
+// let count=0;
+
+//     function increaseCounter(){
+//         count++;
+//         console.log(count)
+//     }
+
+// <button onClick={increaseCounter}>{count}</button>
+
+//this increase the value in console but not in the dom so thats why we need state to render the componenet when there is chnage the state of the componen
+
+
+//hooks allow our functional component to use the functional component of react like use state and use effect total 15 hooks in react till now
+
+//use set is a react hook use to chnage the state of the component 
+
+//state varibales are the varible that we need to rerender the component when there is any chnage in them
+
+
+// import { useEffect, useState } from "react";
+
+// in usestate we pass intial value and it retur arr and its 0 index is current state and the 1 index is the function use to update the current state and re render calls
+
+// let [count,setCount]=useState(0);  here we are destructuring the array 
+
+ function increaseCounter(){
+        // count++;
+        console.log(count)
+        setCount(count+1);//not a good way but work 
+
+        //the mismactch value in console and dom is differenet becuase rerender work in different way we can undersnatd it through clousress
+
+    }
+
+// //use effect is use to run code after component renrender
+
+// useEffect(()=>{
+
+//     console.log("state changed")
+
+// },[])  //for all use state other wise for specfic pass name in the array 
+
+
+//clousre in react 
+
+//the inner function have access to outer variable but outer not have access of inner 
+
+// function outer(){
+//     let a=1;
+//     function inner(){
+//         let b =20;
+//         console.log(a+b);
+//     }
+
+//     return inner
+// }
+
+// //when function excute then variable intialsed only then when they call  and once the the function complete the variavle vanishes
+
+// let inner=outer()  //when we calll it it works but outer is never executeed so how is works ?
+
+// //so becuse of clousere the inner function can preserve means save kr pata the outer variables and use it called scope chain
+
+//how re renders works 
+
+//when we call set state and any change in the intial value the whole component rerender and first thing in this is intialization state and call only once 
+
+//the vlaue of the state variable is updated at re render stage not the calling stage and its also the reson mismatch in consoel and dom value 
+
+//important
+
+//setfunction call many times but it update the value only once 
+
+//becuse setfunction is asyncronus method and expect callback
+
+//callbacks in updater
+
+//two things in callback
+
+// in which old value depend on new  then use call back
+
+//not depends on the old  randomly new value
+
+
+// function increaseCounter(){
+
+//     setCount((currentCount)=>{
+        
+//         return currentCount+1;
+
+//     });
+
+//     //here we can call as many and update is done by number of calls becuse of callback
+
+//     }
+
+
+
+//component only rerender if chnage in the vlaue of the state varibale and first the component is rendered but if change the value with the same value it will not re render
+
+//intialze we also pass the function not to call only pass bexuse if call it call it agin and agin and use resources  
+
+
+
+
 
 
 
